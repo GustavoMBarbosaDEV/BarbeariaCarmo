@@ -1,0 +1,24 @@
+{
+  "id": "./",
+  "name": "Barbearia Carmo",
+  "short_name": "Barb. Carmo",
+  "description": "Agende seu horário na Barbearia Carmo: fade, social, barba, desenho, corte infantil e produtos.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0e0d0f",
+  "theme_color": "#0e0d0f",
+  "categories": ["lifestyle", "beauty", "business"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Agendar horário", "short_name": "Agendar", "url": "./#/agendar", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Meus horários", "short_name": "Horários", "url": "./#/horarios", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] }
+  ]
+}
