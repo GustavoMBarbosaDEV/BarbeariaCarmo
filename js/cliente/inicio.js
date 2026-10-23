@@ -22,22 +22,31 @@ export function tela(el) {
     const prods = S.produtos.filter(p => p.ativo !== false).slice(0, 4);
 
     el.innerHTML = `
-    <section class="hero">
-      <img src="img/casa/salao.jpg" alt="Salão da Barbearia Carmo">
+    <section class="hero hero-carmo">
+      <img class="hero-foto" src="img/casa/salao.jpg" alt="Interior da Barbearia Carmo">
+      <div class="hero-aurora" aria-hidden="true"></div>
+      <div class="hero-orbita" aria-hidden="true">
+        <span class="hero-aro hero-aro-a"></span>
+        <span class="hero-aro hero-aro-b"></span>
+        <div class="hero-selo"><img src="img/logo-320.png" alt="" width="320" height="320"></div>
+        <span class="hero-selo-legenda">DESDE<br><b>2021</b></span>
+      </div>
       <div class="hero-txt">
-        <img class="logo-g" src="img/logo-320.png" alt="" width="76" height="76">
-        <h1>${esc(loja.nome || "Barbearia Carmo")}</h1>
-        <p>${esc(loja.slogan || "")}</p>
+        <div class="hero-kicker"><span></span> BARBEARIA CARMO <i>•</i> DESDE 2021</div>
+        <h1>Seu estilo.<br><em>Nossa assinatura.</em></h1>
+        <p>${esc(loja.slogan || "Precisão no corte. Personalidade em cada detalhe.")}</p>
         <div class="hero-info">
           <span class="aberto-agora ${sit.aberto ? "" : "fechado"}">${esc(sit.texto)}</span>
           ${avaliacoes.length ? `<span>${estrelas(media)} <b>${media.toFixed(1).replace(".", ",")}</b> (${avaliacoes.length})</span>` : ""}
           ${loja.cidade ? `<span>${icone("local")}${esc(loja.cidade.split(",")[0])}</span>` : ""}
         </div>
-        <div class="botoes">
-          <a class="btn" href="#/agendar">${icone("calendario")} Agendar horário</a>
+        <div class="botoes hero-acoes">
+          <a class="btn hero-cta" href="#/agendar">${icone("calendario")} Reservar meu horário <span aria-hidden="true">↗</span></a>
           ${loja.whatsapp ? `<a class="btn sec" href="${linkWhats(loja.whatsapp, "Olá! Vim pelo app da Barbearia Carmo.")}" target="_blank" rel="noopener">${icone("whats")} WhatsApp</a>` : ""}
         </div>
+        <div class="hero-assinatura"><span class="hero-assinatura-linha"></span><span>FADE · BARBA · ESTILO</span><span class="hero-assinatura-linha"></span></div>
       </div>
+      <div class="hero-lateral" aria-hidden="true">C A R M O <span>BARBEARIA • DESDE 2021</span></div>
     </section>
 
     ${nome ? `<p class="muted" style="margin-top:18px">Olá, <b style="color:var(--txt)">${esc(nome)}</b>! Bom te ver por aqui.</p>` : ""}

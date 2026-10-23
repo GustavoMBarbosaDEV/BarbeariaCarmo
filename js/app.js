@@ -8,7 +8,7 @@ import { S } from "./estado.js";
 import { $, esc, icone, toast, ls } from "./util.js";
 import { N } from "./notificacoes.js";
 
-export const VERSAO = "1.1.0";
+export const VERSAO = "1.2.0";
 
 // ---------- Tema ----------
 export function aplicaTema(t = ls.get("bc.tema", "escuro")) {
@@ -164,8 +164,8 @@ async function inicia() {
   primeiro = false;
   window.addEventListener("hashchange", navega);
   await navega();
-  const b = document.getElementById("boot");
-  if (b) { b.classList.add("sai"); setTimeout(() => b.remove(), 400); }
+  if (typeof window.encerrarAbertura === "function") window.encerrarAbertura();
+  else { const b = document.getElementById("boot"); if (b) { b.classList.add("sai"); setTimeout(() => b.remove(), 400); } }
   if (D.modo === "demo" && !ls.get("bc.avisoDemo")) {
     ls.set("bc.avisoDemo", 1);
     toast("Modo demonstração: os dados ficam só neste aparelho.");

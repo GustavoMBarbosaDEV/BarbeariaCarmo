@@ -5,6 +5,13 @@ Ao publicar, atualize `VERSAO` em `js/app.js`, `CACHE` em `sw.js`, escreva aqui 
 
 ---
 
+## 1.2.0 — 23/10/2026 **Redesign imersivo**
+
+- Abertura cinematográfica da Barbearia Carmo com logo em perspectiva 3D, opção para pular e duração curta por sessão.
+- Página inicial refeita com hero editorial, fotografia do salão em camada 3D, selo metálico e chamadas de agendamento.
+- Profundidade e movimento mais presentes em serviços, galeria, shop e cartões, com suporte a telas pequenas e preferência por movimento reduzido.
+- Cache offline e versão do app atualizados para 1.2.0.
+
 ## 1.1.0 — 23/10/2026 **Identidade visual Carmo**
 
 - Paleta reorganizada em vinho, prata, grafite e preto nos temas escuro e claro, incluindo estados e ações de contato.
