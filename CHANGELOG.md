@@ -5,6 +5,13 @@ Ao publicar, atualize `VERSAO` em `js/app.js`, `CACHE` em `sw.js`, escreva aqui 
 
 ---
 
+## 1.3.7 — 23/10/2026 **Enquadramento do hero**
+
+- Selo com logo e data elevado no lado direito.
+- Área da foto do salão ampliada atrás do texto e delimitada por degradê para não invadir a área do selo.
+- Ajustes para desktop, tablet e celular.
+- Versão e cache atualizados para 1.3.7.
+
 ## 1.3.6 — 23/10/2026 **Hero original sem animações orbitais**
 
 - Composição original do hero restaurada, com foto e texto à esquerda e logo Carmo e selo de 2021 à direita.

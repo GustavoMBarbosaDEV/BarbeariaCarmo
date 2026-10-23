@@ -8,7 +8,7 @@ import { S } from "./estado.js";
 import { $, esc, icone, toast, ls } from "./util.js";
 import { N } from "./notificacoes.js";
 
-export const VERSAO = "1.3.6";
+export const VERSAO = "1.3.7";
 
 // ---------- Tema ----------
 export function aplicaTema(t = ls.get("bc.tema", "escuro")) {

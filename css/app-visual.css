@@ -381,3 +381,29 @@ textarea { min-height:108px; resize:vertical; }
 @media (prefers-reduced-motion:reduce) {
   .hero-orbita,.hero-selo,.hero-selo img,.hero-selo-legenda { animation:none!important; transition:none!important; transform:none!important; }
 }
+
+/* Ajuste de enquadramento do hero: foto maior, selo elevado */
+@media (min-width:960px) {
+  .hero.hero-carmo > .hero-foto { width:68%; }
+  .hero-carmo .hero-txt { width:min(70%,720px); }
+  .hero-orbita { inset:23% 8% auto auto; width:clamp(150px,17vw,205px); }
+}
+@media (min-width:521px) and (max-width:959px) {
+  .hero.hero-carmo > .hero-foto {
+    left:0; right:auto; width:70%; height:100%; object-fit:cover; object-position:center 36%;
+    clip-path:none; transform:scale(1.04); transform-origin:left center;
+  }
+  .hero.hero-carmo::before {
+    background:linear-gradient(90deg,rgba(8,8,10,.24) 0%,rgba(8,8,10,.42) 42%,rgba(8,8,10,.86) 65%,#0a090b 73%),
+      linear-gradient(180deg,rgba(8,8,10,.12),rgba(8,8,10,.18) 35%,rgba(10,9,11,.78) 100%);
+  }
+  .hero-carmo .hero-txt { width:70%; min-height:610px; padding-right:12px; }
+  .hero-orbita { inset:24% 6% auto auto; width:clamp(132px,19vw,170px); }
+}
+@media (max-width:520px) {
+  .hero.hero-carmo > .hero-foto {
+    left:0; right:0; width:100%; object-position:center 35%; transform:none;
+  }
+  .hero-carmo .hero-txt { width:100%; }
+  .hero-orbita { inset:8% 6% auto auto; width:112px; }
+}
