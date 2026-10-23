@@ -343,3 +343,41 @@ textarea { min-height:108px; resize:vertical; }
     mask-image:radial-gradient(ellipse 92% 78% at 30% 50%,#000 56%,rgba(0,0,0,.85) 76%,transparent 100%);
   }
 }
+
+/* Hero Carmo — primeira composição restaurada, sem aros ou animação */
+.hero-marca { display:none!important; }
+.hero-orbita {
+  position:absolute; z-index:2; right:15%; top:14%; inset-block:auto;
+  width:clamp(142px,18vw,210px); height:auto; aspect-ratio:1;
+  display:grid; place-items:center; gap:0; padding:0; overflow:visible;
+  border:0; border-radius:0; background:none; box-shadow:none; backdrop-filter:none;
+  transform:none; animation:none; pointer-events:none;
+}
+.hero-orbita::before,.hero-orbita::after,.hero-orbita .hero-aro { display:none!important; }
+.hero-selo {
+  width:78%; max-width:none; aspect-ratio:1; padding:5px; border-radius:50%;
+  transform:none; background:linear-gradient(145deg,rgba(201,203,210,.68),rgba(111,29,49,.72) 54%,rgba(14,13,16,.96));
+  box-shadow:0 16px 36px rgba(0,0,0,.48),inset 0 1px rgba(255,255,255,.48);
+}
+.hero-selo img { width:100%; height:100%; border:1px solid rgba(232,233,238,.68); border-radius:50%; transform:none; }
+.hero-selo-legenda {
+  right:-4%; bottom:3%; position:absolute; display:block; min-width:0;
+  padding:8px 11px; border:1px solid rgba(221,223,230,.4); border-radius:11px;
+  color:#c9cbd2; background:linear-gradient(145deg,rgba(54,51,60,.94),rgba(15,14,18,.96));
+  box-shadow:0 10px 24px rgba(0,0,0,.42); font:600 8px/1.35 var(--sans);
+  letter-spacing:.1em; transform:none; text-align:center;
+}
+.hero-selo-legenda b { color:#f2f1f3; font-size:12px; }
+.hero-lateral { display:block; }
+@media (max-width:959px) {
+  .hero-orbita { top:9%; right:8%; left:auto; width:132px; height:auto; }
+  .hero-selo { width:78%; }
+  .hero-lateral { display:none; }
+}
+@media (max-width:520px) {
+  .hero-orbita { top:8%; right:6%; width:112px; }
+  .hero-selo-legenda { display:none; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .hero-orbita,.hero-selo,.hero-selo img,.hero-selo-legenda { animation:none!important; transition:none!important; transform:none!important; }
+}

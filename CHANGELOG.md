@@ -5,6 +5,13 @@ Ao publicar, atualize `VERSAO` em `js/app.js`, `CACHE` em `sw.js`, escreva aqui 
 
 ---
 
+## 1.3.6 — 23/10/2026 **Hero original sem animações orbitais**
+
+- Composição original do hero restaurada, com foto e texto à esquerda e logo Carmo e selo de 2021 à direita.
+- Aros orbitais e movimentos 3D removidos; logo e selo permanecem estáticos.
+- Demais telas e padrões visuais do app preservados.
+- Versão e cache atualizados para 1.3.6.
+
 ## 1.3.5 — 23/10/2026 **Logo em painel integral no hero**
 
 - Painel do logo passa a preencher toda a altura da área direita do hero.
