@@ -5,6 +5,14 @@ Ao publicar, atualize `VERSAO` em `js/app.js`, `CACHE` em `sw.js`, escreva aqui 
 
 ---
 
+## 1.3.0 — 23/10/2026 **Acabamento das telas internas**
+
+- Atualização visual consistente em agendamento, horários, perfil, shop, sacola e painel do dono.
+- Campos, navegação, cartões, agenda e indicadores receberam melhor hierarquia, estados de foco e profundidade visual.
+- Ajustes responsivos para uso em celular e desktop, com respeito à preferência por movimento reduzido.
+- A abertura e o hero aprovados foram preservados.
+- Cache offline e versão do app atualizados para 1.3.0.
+
 ## 1.2.0 — 23/10/2026 **Redesign imersivo**
 
 - Abertura cinematográfica da Barbearia Carmo com logo em perspectiva 3D, opção para pular e duração curta por sessão.
