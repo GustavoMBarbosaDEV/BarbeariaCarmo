@@ -27,10 +27,10 @@
 .btn.sec:hover { background: var(--sup3); }
 .btn.fantasma { background: transparent; color: var(--txt) !important; border-color: var(--borda); }
 .btn.perigo { background: var(--perigo); color: #fff !important; }
-.btn.ok { background: var(--ok); color: #08130c !important; }
+.btn.ok { background: var(--ok); color: var(--bg) !important; }
 .btn.mini { min-height: 36px; padding: 6px 12px; font-size: 13.5px; border-radius: 10px; }
 .btn.bloco { width: 100%; }
-.btn.whats { background: #1faa59; color: #fff !important; }
+.btn.whats { background: var(--sup3); color: var(--txt) !important; border-color: var(--prata); }
 .botoes { display: flex; gap: 10px; flex-wrap: wrap; }
 .botoes > .btn { flex: 1 1 140px; }
 

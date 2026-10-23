@@ -7,7 +7,7 @@ Ao publicar, atualize `VERSAO` em `js/app.js`, `CACHE` em `sw.js`, escreva aqui 
 
 ## 1.1.0 — 23/10/2026 **Identidade visual Carmo**
 
-- Paleta reorganizada em vinho, prata, grafite e preto nos temas escuro e claro.
+- Paleta reorganizada em vinho, prata, grafite e preto nos temas escuro e claro, incluindo estados e ações de contato.
 - Folha de estilos dividida por tokens, base, layout, componentes, telas e movimento.
 - Hero, galeria, serviços e produtos ganharam profundidade sutil e microinterações 3D em ponteiros compatíveis.
 - Movimento reduzido respeita a preferência do sistema; estilos inline do carregamento foram removidos.
