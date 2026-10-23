@@ -5,6 +5,12 @@ Ao publicar, atualize `VERSAO` em `js/app.js`, `CACHE` em `sw.js`, escreva aqui 
 
 ---
 
+## 1.3.1 — 23/10/2026 **Selo do hero em card**
+
+- O emblema Carmo e o marco de 2021 foram organizados em um único card metálico no hero.
+- Anéis orbitais e texto vertical foram removidos; o painel de texto à esquerda permaneceu intacto.
+- Card ajustado para desktop e celular; cache e versão atualizados para 1.3.1.
+
 ## 1.3.0 — 23/10/2026 **Acabamento das telas internas**
 
 - Atualização visual consistente em agendamento, horários, perfil, shop, sacola e painel do dono.
