@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Barbearia Carmo — Agende seu horário</title>
 <meta name="description" content="Barbearia Carmo, desde 2021: agende corte, barba e desenho, veja nossos trabalhos e os produtos do shop.">
-<meta name="theme-color" content="#0e0d0f">
+<meta name="theme-color" content="#09090b">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/favicon.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -13,21 +13,23 @@
 <meta name="apple-mobile-web-app-title" content="Carmo">
 <meta property="og:title" content="Barbearia Carmo">
 <meta property="og:description" content="Agende seu horário: fade, social, barba, desenho e corte infantil.">
-<meta property="og:image" content="img/logo-320.png">
+<meta property="og:image" content="https://gustavombarbosadev.github.io/BarbeariaCarmo/img/logo-600.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap">
-<link rel="stylesheet" href="css/style.css">
-<style>
-  #boot{position:fixed;inset:0;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:radial-gradient(70% 50% at 50% 42%,#2a1215,#0e0d0f 72%);color:#f2f1f3;font:700 22px "Playfair Display",Georgia,serif;transition:opacity .35s}
-  #boot img{width:min(42vw,170px);height:auto;border-radius:50%;box-shadow:0 0 0 2px rgba(214,214,220,.35),0 20px 60px rgba(200,35,44,.3)}
-  #boot.sai{opacity:0;pointer-events:none}
-</style>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/client.css">
+<link rel="stylesheet" href="css/owner.css">
+<link rel="stylesheet" href="css/overlays.css">
+<link rel="stylesheet" href="css/motion.css">
 </head>
 <body>
 <div id="boot" aria-hidden="true"><img src="img/logo-320.png" alt="" width="320" height="320"><span>Barbearia Carmo</span></div>
 <div id="app"></div>
-<noscript><p style="padding:24px;color:#fff">Ative o JavaScript para usar o app da Barbearia Carmo.</p></noscript>
+<noscript><p class="no-script-notice">Ative o JavaScript para usar o app da Barbearia Carmo.</p></noscript>
 <script>
   // tela de abertura some sozinha se algo demorar
   setTimeout(function(){var b=document.getElementById("boot");if(b){b.classList.add("sai");setTimeout(function(){b.remove()},400)}},7000);

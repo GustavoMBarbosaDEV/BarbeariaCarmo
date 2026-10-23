@@ -21,7 +21,7 @@ export function tela(el) {
       <div class="kpis" style="margin-bottom:14px">
         <div class="kpi"><small>Novos</small><b>${pedidos.filter(p => p.status === "novo").length}</b></div>
         <div class="kpi"><small>Prontos p/ retirar</small><b>${pedidos.filter(p => p.status === "separado").length}</b></div>
-        <div class="kpi ouro"><small>Vendido no mês</small><b>${reais(vendidoMes)}</b></div>
+        <div class="kpi destaque"><small>Vendido no mês</small><b>${reais(vendidoMes)}</b></div>
         <div class="kpi"><small>Em aberto</small><b>${reais(abertos.reduce((s, p) => s + p.total, 0))}</b></div>
       </div>
       <div class="seg" style="margin-bottom:12px"><button class="${aba === "abertos" ? "ativo" : ""}" data-a="abertos">Em aberto (${abertos.length})</button><button class="${aba === "fechados" ? "ativo" : ""}" data-a="fechados">Finalizados (${fechados.length})</button></div>

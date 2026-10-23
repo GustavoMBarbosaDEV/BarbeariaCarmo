@@ -1,9 +1,17 @@
 # Histórico de versões — Barbearia Carmo
 
-O número segue o padrão **MAIOR.MENOR.CORREÇÃO** (igual ao Monetra).
+O número segue o padrão de versionamento semântico **MAIOR.MENOR.CORREÇÃO**.
 Ao publicar, atualize `VERSAO` em `js/app.js`, `CACHE` em `sw.js`, escreva aqui o que mudou e marque o commit com uma tag (ex.: `v1.0.0`).
 
 ---
+
+## 1.1.0 — 23/10/2026 **Identidade visual Carmo**
+
+- Paleta reorganizada em vinho, prata, grafite e preto nos temas escuro e claro.
+- Folha de estilos dividida por tokens, base, layout, componentes, telas e movimento.
+- Hero, galeria, serviços e produtos ganharam profundidade sutil e microinterações 3D em ponteiros compatíveis.
+- Movimento reduzido respeita a preferência do sistema; estilos inline do carregamento foram removidos.
+- Referências de documentação a outro projeto foram removidas.
 
 ## 1.0.0 — 20/10/2026 **Primeira versão**
 

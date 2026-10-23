@@ -21,7 +21,7 @@ export function tela(el, rota) {
     const preferido = Object.entries(serv).sort((a, b) => b[1] - a[1])[0];
     const aniv = c.nascimento && c.nascimento.slice(5) === hoje().slice(5);
     el.innerHTML = `<a class="voltar" href="#/dono/clientes">${icone("voltar")} Clientes</a>
-      <div class="perfil-topo">${avatar(c.nome, "", "g")}<div style="min-width:0"><h1>${esc(c.nome)}</h1><p class="muted pequeno">${c.manual ? "Cadastrado no balcão" : "Usa o app"} · desde ${dataCurta(new Date(c.criadoEm || Date.now()).toISOString().slice(0, 10))}</p>${aniv ? `<span class="pill ouro" style="margin-top:6px">🎂 Aniversário hoje</span>` : ""}</div></div>
+      <div class="perfil-topo">${avatar(c.nome, "", "g")}<div style="min-width:0"><h1>${esc(c.nome)}</h1><p class="muted pequeno">${c.manual ? "Cadastrado no balcão" : "Usa o app"} · desde ${dataCurta(new Date(c.criadoEm || Date.now()).toISOString().slice(0, 10))}</p>${aniv ? `<span class="pill destaque" style="margin-top:6px">🎂 Aniversário hoje</span>` : ""}</div></div>
       <div class="botoes" style="margin-bottom:16px">
         ${c.telefone ? `<a class="btn whats mini" target="_blank" rel="noopener" href="${linkWhats(c.telefone, `Olá, ${c.nome.split(" ")[0]}!`)}">${icone("whats")} WhatsApp</a>` : ""}
         ${!c.manual ? `<button class="btn sec mini" id="msg">${icone("sino")} Mensagem no app</button>` : ""}
@@ -29,7 +29,7 @@ export function tela(el, rota) {
       </div>
       <div class="kpis">
         <div class="kpi"><small>Visitas</small><b>${feitos.length}</b></div>
-        <div class="kpi ouro"><small>Total gasto</small><b>${reais(gasto)}</b></div>
+        <div class="kpi destaque"><small>Total gasto</small><b>${reais(gasto)}</b></div>
         <div class="kpi"><small>Ticket médio</small><b>${reais(feitos.length ? feitos.reduce((s, a) => s + a.total, 0) / feitos.length : 0)}</b></div>
         <div class="kpi"><small>Faltas</small><b>${faltas}</b></div>
       </div>

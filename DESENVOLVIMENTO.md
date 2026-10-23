@@ -7,7 +7,7 @@ Para a apresentação do app, veja o [README](README.md).
 
 ## Como o app foi feito
 
-Mesma base do Monetra: **HTML, CSS e JavaScript puros**, sem framework, sem npm e sem build.
+O app usa **HTML, CSS e JavaScript puros**, sem framework, sem npm e sem build.
 O que está no GitHub é exatamente o que o navegador roda. A diferença é que aqui o código foi
 **dividido em módulos** (um arquivo por tela), em vez de um `app.js` gigante.
 
@@ -19,7 +19,15 @@ BarbeariaCarmo/
 ├── manifest.webmanifest    → nome, ícones e cores do app instalado
 ├── sw.js                   → service worker: abre sem internet e mostra notificações
 ├── .nojekyll               → GitHub Pages serve os arquivos como estão
-├── css/style.css           → visual (tema escuro e claro, celular e computador)
+├── css/
+│   ├── tokens.css         → paleta Carmo, tipografia e variáveis de interface
+│   ├── base.css           → estilos globais e formulários
+│   ├── layout.css         → moldura e navegação responsiva
+│   ├── components.css     → componentes reutilizáveis
+│   ├── client.css         → telas do cliente
+│   ├── owner.css          → painel do dono
+│   ├── overlays.css       → estados, modais e carregamento
+│   └── motion.css         → profundidade e movimento com redução acessível
 ├── img/                    → logo, fotos dos cortes (cortes/) e da barbearia (casa/)
 ├── icons/                  → ícones do app (192, 512, maskable, apple, favicon)
 └── js/
@@ -66,16 +74,16 @@ antes de configurar o Firebase. Em **Ajustes → Recomeçar demonstração** tud
 4. No site do GitHub, abra o repositório → **Settings → Pages** → Branch **main** e **/ (root)** → **Save**.
 5. Em 1–2 minutos o app estará em `https://gustavombarbosadev.github.io/BarbeariaCarmo/` (em modo demonstração).
 
-> O GitHub Desktop troca de projeto no seletor **Current repository** (canto de cima à esquerda). O Monetra continua lá, separado.
+> O GitHub Desktop troca de projeto pelo seletor **Current repository**, no canto superior esquerdo.
 
 ## Passo 2 — Criar o Firebase (grátis, plano Spark)
 
-Use um projeto **novo**, separado do Monetra.
+Use um projeto Firebase **exclusivo para a Barbearia Carmo**.
 
 1. **console.firebase.google.com** → **Criar um projeto** → nome `barbearia-carmo` → pode desativar o Analytics.
 2. **Registrar o app web:** ícone **`</>`** → apelido `barbearia-carmo` → **não** marque Hosting → **Registrar app**. Copie os valores do `firebaseConfig`.
 3. **Login com Google:** Criação → **Authentication** → Vamos começar → **Google → Ativar** → e-mail de suporte → Salvar.
-4. **Domínio autorizado:** Authentication → Configurações → **Domínios autorizados → Adicionar** `gustavombarbosadev.github.io` (já deve estar se você usar o mesmo domínio do Monetra, mas é outro projeto, então adicione).
+4. **Domínio autorizado:** Authentication → Configurações → **Domínios autorizados → Adicionar** `gustavombarbosadev.github.io`.
 5. **Banco:** Criação → **Firestore Database** → Criar → local **southamerica-east1 (São Paulo)** → modo **produção**.
 6. **Regras:** abra o `firestore.rules`, troque `EMAIL_DO_DONO@gmail.com` pelo **e-mail Google do dono da barbearia**, cole tudo na aba **Regras** do Firestore e clique em **Publicar**.
 
@@ -139,10 +147,9 @@ quando um agendamento muda de status ou falta 1 hora, envia o push. O `sw.js` j�
 
 ## Aplicativo Android (APK) — grátis
 
-Igual ao Monetra: **pwabuilder.com** → cole o endereço → **Package for stores → Android**.
+**pwabuilder.com** → cole o endereço → **Package for stores → Android**.
 Use um *Package ID* próprio, por exemplo `io.github.gustavombarbosadev.barbeariacarmo`, e **guarde a signing key**.
-O `assetlinks.json` vai no mesmo repositório `GustavoMBarbosaDEV.github.io/.well-known/` (é uma lista: acrescente
-a entrada do novo app sem apagar a do Monetra).
+O `assetlinks.json` vai no mesmo repositório `GustavoMBarbosaDEV.github.io/.well-known/` (mantenha as entradas existentes e acrescente a da Barbearia Carmo).
 
 ## Cuidados (LGPD)
 

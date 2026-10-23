@@ -1,0 +1,27 @@
+/* Barbearia Carmo — design tokens */
+:root {
+  --bg:#09090b; --sup:#121216; --sup2:#1b1a20; --sup3:#27252c; --borda:#3c3942;
+  --txt:#f4f3f5; --muted:#b4b2bc; --fraco:#88848f;
+  --vinho:#6f1d31; --vinho-2:#a6324b; --vinho-contrast:#fff; --vinho-soft:rgba(111,29,49,.22);
+  --prata:#c9cbd2; --prata-clara:#eceef2;
+  --ok:#63c08a; --ok-sut:rgba(99,192,138,.14);
+  --aviso:#c0c3cb; --aviso-sut:rgba(192,195,203,.14);
+  --perigo:#b94457; --perigo-sut:rgba(185,68,87,.16);
+  --info:#aeb5c1; --info-sut:rgba(174,181,193,.14);
+  --sombra:0 18px 48px rgba(0,0,0,.42); --raio:18px; --raio-p:11px;
+  --topo:64px; --abas:66px;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:Inter,"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  color-scheme:dark;
+}
+:root[data-theme="light"] {
+  --bg:#f3f2f4; --sup:#fff; --sup2:#eeedf0; --sup3:#e4e2e7; --borda:#d6d3dc;
+  --txt:#1c1a1e; --muted:#5f5b65; --fraco:#85818b;
+  --vinho:#641729; --vinho-2:#84233a; --vinho-contrast:#fff; --vinho-soft:rgba(100,23,41,.10);
+  --prata:#71747d; --prata-clara:#d4d6dc;
+  --ok:#23874f; --ok-sut:rgba(35,135,79,.12);
+  --aviso:#747984; --aviso-sut:rgba(116,121,132,.12);
+  --perigo:#982d43; --perigo-sut:rgba(152,45,67,.10);
+  --info:#687181; --info-sut:rgba(104,113,129,.10);
+  --sombra:0 16px 40px rgba(30,20,30,.12); color-scheme:light;
+}

@@ -8,13 +8,13 @@ import { S } from "./estado.js";
 import { $, esc, icone, toast, ls } from "./util.js";
 import { N } from "./notificacoes.js";
 
-export const VERSAO = "1.0.0";
+export const VERSAO = "1.1.0";
 
 // ---------- Tema ----------
 export function aplicaTema(t = ls.get("bc.tema", "escuro")) {
   const escuro = t === "escuro" || (t === "auto" && matchMedia("(prefers-color-scheme: dark)").matches);
   document.documentElement.dataset.theme = escuro ? "dark" : "light";
-  $('meta[name="theme-color"]')?.setAttribute("content", escuro ? "#0e0d0f" : "#f5f4f6");
+  $('meta[name="theme-color"]')?.setAttribute("content", escuro ? "#09090b" : "#f3f2f4");
 }
 export function trocaTema(t) { ls.set("bc.tema", t); aplicaTema(t); }
 aplicaTema();

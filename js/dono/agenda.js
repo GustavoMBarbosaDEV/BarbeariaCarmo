@@ -78,7 +78,7 @@ export function tela(el, rota) {
       <div class="kpis" style="margin-bottom:14px">
         <div class="kpi"><small>Atendimentos</small><b>${validos.filter(a => a.status !== "faltou").length}</b></div>
         <div class="kpi"><small>Aguardando</small><b>${ags.filter(a => a.status === "marcado").length}</b></div>
-        <div class="kpi ouro"><small>Previsto no dia</small><b>${reais(previsto)}</b></div>
+        <div class="kpi destaque"><small>Previsto no dia</small><b>${reais(previsto)}</b></div>
         <div class="kpi"><small>Já concluído</small><b>${reais(feito)}</b></div>
       </div>
       ${profsAtivos().length > 1 ? `<div class="chips" style="margin-bottom:12px"><button class="chip ${!filtroProf ? "ativo" : ""}" data-f="">Todos</button>${profsAtivos().map(p => `<button class="chip ${filtroProf === p.id ? "ativo" : ""}" data-f="${esc(p.id)}">${esc(p.nome)}</button>`).join("")}</div>` : ""}
