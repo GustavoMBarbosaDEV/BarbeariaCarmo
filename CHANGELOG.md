@@ -5,6 +5,12 @@ Ao publicar, atualize `VERSAO` em `js/app.js`, `CACHE` em `sw.js`, escreva aqui 
 
 ---
 
+## 1.3.4 — 23/10/2026 **Logo ampliado e integrado ao degradê**
+
+- Logo ampliado no lado direito do hero e alinhado à esquerda dessa área.
+- Máscara suave nas bordas para misturar a imagem ao degradê, preservando intacto o painel de texto.
+- Versão e cache atualizados para 1.3.4.
+
 ## 1.3.3 — 23/10/2026 **Logo estático e campos padronizados**
 
 - Elemento orbital do hero removido e substituído pelo logo Carmo estático, alinhado à esquerda em uma faixa degradê.
