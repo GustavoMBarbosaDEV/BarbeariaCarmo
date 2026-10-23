@@ -162,3 +162,73 @@ body { background-image: radial-gradient(ellipse at 82% 0,rgba(111,29,49,.12),tr
 @media (prefers-reduced-motion:reduce) {
   .hero-orbita { animation:none!important; transform:translateY(-50%)!important; }
 }
+
+/* Superfícies unificadas — padrão de acabamento dos cards Carmo */
+:root {
+  --carmo-surface: linear-gradient(145deg,rgba(31,29,35,.97),rgba(17,16,20,.98));
+  --carmo-edge: rgba(201,203,210,.2);
+  --carmo-highlight: rgba(245,246,250,.075);
+}
+:root[data-theme="light"] {
+  --carmo-surface: linear-gradient(145deg,rgba(255,255,255,.98),rgba(239,237,241,.98));
+  --carmo-edge: rgba(80,73,85,.18);
+  --carmo-highlight: rgba(255,255,255,.85);
+}
+.card,.lista,.kpi,.agenda-col,.tabela-wrap,.perfil-topo,.banner-shop,.faixa,.menu-grade a,
+.produto,.cartao-serv,.prof-op,.horario-card,.resumo-fixo,.confirma-card,.banner-shop {
+  border:1px solid var(--carmo-edge);
+  background-color:var(--sup);
+  background-image:radial-gradient(ellipse at 0 0,rgba(201,203,210,.055),transparent 54%),
+    radial-gradient(ellipse at 100% 100%,rgba(111,29,49,.075),transparent 48%),
+    var(--carmo-surface);
+  box-shadow:0 16px 38px rgba(0,0,0,.24),inset 0 1px var(--carmo-highlight);
+}
+.card,.kpi,.perfil-topo,.menu-grade a,.produto,.cartao-serv,.prof-op,.horario-card,.faixa {
+  border-radius:var(--raio);
+}
+.lista,.agenda-col,.tabela-wrap { overflow:hidden; }
+.lista > .item + .item,.lista > .config-item + .config-item,
+.lista > .notif + .notif,.lista > .horario-card + .horario-card,
+.lista > .serv + .serv,.lista > .avaliacao + .avaliacao {
+  border-top-color:color-mix(in srgb,var(--carmo-edge) 78%,transparent);
+}
+.card { padding:clamp(16px,2vw,24px); }
+.card > h2,.card > h3 { color:var(--prata-clara); letter-spacing:-.015em; }
+.kpi { position:relative; overflow:hidden; }
+.kpi::after {
+  content:""; position:absolute; top:0; right:0; width:76px; height:2px;
+  background:linear-gradient(90deg,transparent,var(--vinho-2),var(--prata));
+  opacity:.72;
+}
+.menu-grade a { position:relative; overflow:hidden; }
+.menu-grade a::after {
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(120deg,transparent 25%,rgba(236,238,242,.045) 50%,transparent 72%);
+  transform:translateX(-100%); transition:transform .65s cubic-bezier(.2,.8,.2,1);
+}
+.menu-grade a:hover::after { transform:translateX(100%); }
+.produto,.cartao-serv { overflow:hidden; }
+.prof-op { border-width:1px; }
+.prof-op.on { border-color:var(--vinho-2); background-image:radial-gradient(ellipse at 50% 0,rgba(166,50,75,.2),transparent 72%),var(--carmo-surface); }
+.faixa { border-color:color-mix(in srgb,var(--vinho-2) 28%,var(--carmo-edge)); }
+.agenda-col h3 { background:linear-gradient(110deg,rgba(201,203,210,.075),transparent),var(--carmo-surface); }
+.ag,.livre { background-color:transparent; }
+.barra-dia { background-image:linear-gradient(135deg,rgba(201,203,210,.055),transparent),var(--carmo-surface); box-shadow:inset 0 1px var(--carmo-highlight); }
+.banner-shop { border-color:var(--carmo-edge); }
+.tabela-wrap { border-radius:var(--raio); }
+.tabela th { background:rgba(201,203,210,.07); }
+.resumo-fixo { backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); }
+@media (hover:hover) and (pointer:fine) {
+  .card:hover,.kpi:hover,.menu-grade a:hover,.produto:hover,.cartao-serv:hover,.prof-op:hover,.faixa:hover {
+    border-color:color-mix(in srgb,var(--prata) 38%,var(--carmo-edge));
+    box-shadow:0 22px 48px rgba(0,0,0,.32),inset 0 1px rgba(255,255,255,.11),0 0 22px rgba(111,29,49,.08);
+  }
+}
+@media (max-width:640px) {
+  .card { padding:16px; }
+  .lista,.agenda-col,.tabela-wrap { border-radius:16px; }
+  .kpi,.produto,.cartao-serv,.prof-op,.horario-card,.faixa { border-radius:15px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .menu-grade a::after { transition:none; }
+}

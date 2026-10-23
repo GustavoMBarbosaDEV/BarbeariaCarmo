@@ -5,6 +5,13 @@ Ao publicar, atualize `VERSAO` em `js/app.js`, `CACHE` em `sw.js`, escreva aqui 
 
 ---
 
+## 1.3.2 — 23/10/2026 **Cards tecnológicos em todo o app**
+
+- Caixas, painéis, listas, indicadores, catálogo e agenda usam uma superfície grafite e metálica unificada.
+- Bordas, luzes sutis, hierarquia visual e estados de interação foram refinados sem alterar a estrutura dos formulários.
+- Ajustes mantêm leitura em celular e respeitam movimento reduzido.
+- Versão e cache atualizados para 1.3.2.
+
 ## 1.3.1 — 23/10/2026 **Selo do hero em card**
 
 - O emblema Carmo e o marco de 2021 foram organizados em um único card metálico no hero.
