@@ -5,6 +5,13 @@ Ao publicar, atualize `VERSAO` em `js/app.js`, `CACHE` em `sw.js`, escreva aqui 
 
 ---
 
+## 1.3.5 — 23/10/2026 **Logo em painel integral no hero**
+
+- Painel do logo passa a preencher toda a altura da área direita do hero.
+- Degradê e textura derivados do logo ajudam a preencher o painel sem invadir a área da foto à esquerda.
+- Marca central preservada sem cortes, com ajuste para celular.
+- Versão e cache atualizados para 1.3.5.
+
 ## 1.3.4 — 23/10/2026 **Logo ampliado e integrado ao degradê**
 
 - Logo ampliado no lado direito do hero e alinhado à esquerda dessa área.

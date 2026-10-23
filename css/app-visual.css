@@ -306,3 +306,40 @@ textarea { min-height:108px; resize:vertical; }
   .hero-marca { inset:14px auto auto 14px; padding-right:24px; }
   .hero-marca img { width:clamp(138px,38vw,178px); }
 }
+
+/* Painel do hero: ocupa toda a área da direita e mantém a foto à esquerda */
+.hero-marca {
+  inset:0 0 0 59%; width:auto; height:auto; overflow:hidden;
+  align-items:center; padding:0 clamp(16px,2.6vw,38px);
+  background:linear-gradient(90deg,rgba(9,9,11,0) 0%,rgba(9,9,11,.62) 18%,rgba(9,9,11,.94) 72%,#09090b 100%);
+}
+.hero-marca::before {
+  content:""; position:absolute; z-index:-1; inset:-3%;
+  background:url("../img/logo-320.png") center/cover no-repeat;
+  opacity:.26; filter:blur(15px) saturate(.72); transform:scale(1.06);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 22%,#000 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,#000 22%,#000 100%);
+}
+.hero-marca img {
+  position:relative; z-index:1; width:100%; height:100%; max-width:none;
+  object-fit:contain; object-position:left center; padding:0;
+  -webkit-mask-image:radial-gradient(ellipse 86% 80% at 34% 50%,#000 55%,rgba(0,0,0,.9) 72%,transparent 100%);
+  mask-image:radial-gradient(ellipse 86% 80% at 34% 50%,#000 55%,rgba(0,0,0,.9) 72%,transparent 100%);
+  filter:drop-shadow(0 14px 24px rgba(0,0,0,.32));
+}
+@media (max-width:959px) {
+  .hero-marca {
+    inset:0 0 0 22%; width:auto; height:auto; padding:0 10px 0 0;
+    align-items:center; justify-content:flex-start;
+    background:linear-gradient(90deg,rgba(9,9,11,0) 0%,rgba(9,9,11,.58) 20%,rgba(9,9,11,.94) 68%,#09090b 100%);
+  }
+  .hero-marca::before { opacity:.22; filter:blur(12px) saturate(.7); }
+  .hero-marca img { width:100%; height:100%; object-fit:contain; object-position:left center; }
+}
+@media (max-width:520px) {
+  .hero-marca { inset:0 0 0 20%; padding-right:4px; }
+  .hero-marca img {
+    -webkit-mask-image:radial-gradient(ellipse 92% 78% at 30% 50%,#000 56%,rgba(0,0,0,.85) 76%,transparent 100%);
+    mask-image:radial-gradient(ellipse 92% 78% at 30% 50%,#000 56%,rgba(0,0,0,.85) 76%,transparent 100%);
+  }
+}
