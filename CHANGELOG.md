@@ -5,6 +5,13 @@ Ao publicar, atualize `VERSAO` em `js/app.js`, `CACHE` em `sw.js`, escreva aqui 
 
 ---
 
+## 1.3.3 — 23/10/2026 **Logo estático e campos padronizados**
+
+- Elemento orbital do hero removido e substituído pelo logo Carmo estático, alinhado à esquerda em uma faixa degradê.
+- O painel de texto aprovado foi preservado.
+- Campos de texto, busca, data, hora e seleção agora compartilham altura, fundo, borda, foco e espaçamento consistentes nos temas claro e escuro.
+- Versão e cache atualizados para 1.3.3.
+
 ## 1.3.2 — 23/10/2026 **Cards tecnológicos em todo o app**
 
 - Caixas, painéis, listas, indicadores, catálogo e agenda usam uma superfície grafite e metálica unificada.

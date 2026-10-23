@@ -25,11 +25,8 @@ export function tela(el) {
     <section class="hero hero-carmo">
       <img class="hero-foto" src="img/casa/salao.jpg" alt="Interior da Barbearia Carmo">
       <div class="hero-aurora" aria-hidden="true"></div>
-      <div class="hero-orbita" aria-hidden="true">
-        <span class="hero-aro hero-aro-a"></span>
-        <span class="hero-aro hero-aro-b"></span>
-        <div class="hero-selo"><img src="img/logo-320.png" alt="" width="320" height="320"></div>
-        <span class="hero-selo-legenda">DESDE<br><b>2021</b></span>
+      <div class="hero-marca" aria-hidden="true">
+        <img src="img/logo-320.png" alt="Logo da Barbearia Carmo" width="320" height="320">
       </div>
       <div class="hero-txt">
         <div class="hero-kicker"><span></span> BARBEARIA CARMO <i>•</i> DESDE 2021</div>
@@ -46,7 +43,6 @@ export function tela(el) {
         </div>
         <div class="hero-assinatura"><span class="hero-assinatura-linha"></span><span>FADE · BARBA · ESTILO</span><span class="hero-assinatura-linha"></span></div>
       </div>
-      <div class="hero-lateral" aria-hidden="true">C A R M O <span>BARBEARIA • DESDE 2021</span></div>
     </section>
 
     ${nome ? `<p class="muted" style="margin-top:18px">Olá, <b style="color:var(--txt)">${esc(nome)}</b>! Bom te ver por aqui.</p>` : ""}
