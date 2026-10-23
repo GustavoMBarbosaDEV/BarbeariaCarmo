@@ -347,7 +347,7 @@ textarea { min-height:108px; resize:vertical; }
 /* Hero Carmo — primeira composição restaurada, sem aros ou animação */
 .hero-marca { display:none!important; }
 .hero-orbita {
-  position:absolute; z-index:2; right:15%; top:14%; inset-block:auto;
+  position:absolute; z-index:2; inset:auto 15% auto auto;
   width:clamp(142px,18vw,210px); height:auto; aspect-ratio:1;
   display:grid; place-items:center; gap:0; padding:0; overflow:visible;
   border:0; border-radius:0; background:none; box-shadow:none; backdrop-filter:none;
@@ -370,12 +370,12 @@ textarea { min-height:108px; resize:vertical; }
 .hero-selo-legenda b { color:#f2f1f3; font-size:12px; }
 .hero-lateral { display:block; }
 @media (max-width:959px) {
-  .hero-orbita { top:9%; right:8%; left:auto; width:132px; height:auto; }
+  .hero-orbita { inset:9% 8% auto auto; width:132px; height:auto; }
   .hero-selo { width:78%; }
   .hero-lateral { display:none; }
 }
 @media (max-width:520px) {
-  .hero-orbita { top:8%; right:6%; width:112px; }
+  .hero-orbita { inset:8% 6% auto auto; width:112px; }
   .hero-selo-legenda { display:none; }
 }
 @media (prefers-reduced-motion:reduce) {
